@@ -13,12 +13,11 @@ class MealDetailsScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(meal.title),
       ),
-      body: FadeInImage(
-        placeholder: MemoryImage(kTransparentImage),
-        image: NetworkImage(meal.imageUrl),
-        fit: BoxFit.cover,
-        height: 200,
+      body: Image.network(
+        meal.imageUrl,
         width: double.infinity,
+        height: 300,
+        fit: BoxFit.cover,
       ),
     );
   }
